@@ -2,7 +2,7 @@ package vehiculos;
 
 public class Camioneta extends Vehiculo {
 	private boolean volco;
-	
+	private static int cantidadCamionetas;
 	
 	public boolean isVolco() {
 		return volco;
@@ -13,18 +13,14 @@ public class Camioneta extends Vehiculo {
 		this.volco = volco;
 	}
 
-
-	public Camioneta (String placa,int puertas,float velocidadMaxima,String nombre,float precio,int peso,String traccion,
-			Fabricante fabricante,int cantidadVehiculos,boolean volco) {
-		setPlaca(placa);
-		setPuertas(puertas);
-		setVelocidadMaxima(90);
-		setNombre(nombre);
-		setPrecio(precio);
-		setPeso(peso);
-		setTraccion("4X4");
-		setFabricante(fabricante);
-		cantidadVehiculos ++;
-		setVolco(volco);
+	public static int getCantidadCamionetas() {
+		return cantidadCamionetas;
 	}
+
+	public Camioneta(String placa, int puertas,String nombre, float precio, int peso,
+			Fabricante fabricante,boolean volco) {
+		super(placa, puertas,90, nombre, precio, peso, "4x4", fabricante);
+		this.volco = volco;
+	}
+	
 }

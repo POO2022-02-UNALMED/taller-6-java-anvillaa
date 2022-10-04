@@ -1,6 +1,6 @@
 package vehiculos;
 
-public class País {
+public class Pais {
 	private String nombre;
 
 	public String getNombre() {

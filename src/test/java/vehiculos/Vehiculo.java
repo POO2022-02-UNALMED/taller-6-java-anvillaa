@@ -9,7 +9,7 @@ public class Vehiculo {
 	private int peso;
 	private String traccion;
 	private Fabricante fabricante;
-	private int cantidadVehiculos;
+	private static int cantidadVehiculos;
 	
 	
 	public String getPlaca() {
@@ -60,12 +60,25 @@ public class Vehiculo {
 	public void setFabricante(Fabricante fabricante) {
 		this.fabricante = fabricante;
 	}
-	public int getCantidadVehiculos() {
-		return cantidadVehiculos;
-	}
-	public void setCantidadVehiculos(int cantidadVehiculos) {
-		this.cantidadVehiculos = cantidadVehiculos;
-	}
 	
 	
+	public Vehiculo(String placa, int puertas, float velocidadMaxima, String nombre, float precio, int peso,
+			String traccion, Fabricante fabricante) {
+		super();
+		this.placa = placa;
+		this.puertas = puertas;
+		this.velocidadMaxima = velocidadMaxima;
+		this.nombre = nombre;
+		this.precio = precio;
+		this.peso = peso;
+		this.traccion = traccion;
+		this.fabricante = fabricante;
+		cantidadVehiculos++;
+	}
+	public String vehiculosPorTipo(){
+		String texto = ("Automoviles "+Automóvil.getCantidadAutomoviles() +"\n" +"Camionetas " +Camioneta.getCantidadCamionetas()
+		+"\n"+"Camiones "+Camion.getCantidadCamiones());
+		return texto;
+		
+	}
 }
