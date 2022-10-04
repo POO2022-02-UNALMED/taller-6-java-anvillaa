@@ -62,6 +62,9 @@ public class Vehiculo {
 	}
 	
 	
+	public static int getCantidadVehiculos() {
+		return cantidadVehiculos;
+	}
 	public Vehiculo(String placa, int puertas, float velocidadMaxima, String nombre, float precio, int peso,
 			String traccion, Fabricante fabricante) {
 		super();
@@ -77,7 +80,7 @@ public class Vehiculo {
 		cantidadVehiculos++;
 	}
 	public String vehiculosPorTipo(){
-		String texto = ("Automoviles "+Automóvil.getCantidadAutomoviles() +"\n" +"Camionetas " +Camioneta.getCantidadCamionetas()
+		String texto = ("Automoviles "+Automovil.getCantidadAutomoviles() +"\n" +"Camionetas " +Camioneta.getCantidadCamionetas()
 		+"\n"+"Camiones "+Camion.getCantidadCamiones());
 		return texto;
 		
