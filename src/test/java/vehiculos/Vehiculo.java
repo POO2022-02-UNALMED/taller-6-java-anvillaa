@@ -73,6 +73,7 @@ public class Vehiculo {
 		this.peso = peso;
 		this.traccion = traccion;
 		this.fabricante = fabricante;
+		fabricante.cantidadCreadosFabrica++;
 		cantidadVehiculos++;
 	}
 	public String vehiculosPorTipo(){
