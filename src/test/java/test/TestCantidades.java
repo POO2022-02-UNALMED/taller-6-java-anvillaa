@@ -14,7 +14,7 @@ import vehiculos.Fabricante;
 import vehiculos.Pais;
 import vehiculos.Vehiculo;
 
-
+ 
 @TestMethodOrder(MethodOrderer.Alphanumeric.class)
 public class TestCantidades {
 	
