@@ -28,11 +28,11 @@ public class Fabricante {
 		pais.agregarFabrica(this);
 	}
 	
-	public static int fabricaMayorVentas() {
-		int cantidadMaximo=listFabrica.get(0).cantidadCreadosFabrica;
+	public static Fabricante fabricaMayorVentas() {
+		Fabricante cantidadMaximo=listFabrica.get(0);
 		for(int i = 1;i<listFabrica.size();i++) {
-			if (cantidadMaximo<listFabrica.get(i).cantidadCreadosFabrica) {
-				cantidadMaximo = listFabrica.get(i).cantidadCreadosFabrica;
+			if (cantidadMaximo.cantidadCreadosFabrica<listFabrica.get(i).cantidadCreadosFabrica) {
+				cantidadMaximo.cantidadCreadosFabrica = listFabrica.get(i).cantidadCreadosFabrica;
 			}
 		}
 		return cantidadMaximo;
