@@ -20,7 +20,7 @@ public class Fabricante {
 	public void setPais(Pais pais) {
 		this.pais = pais;
 	}
-	public Fabricante(String nombre, Pais pais, ArrayList<Fabricante> listFabrica) {
+	public Fabricante(String nombre, Pais pais) {
 		super();
 		this.nombre = nombre;
 		this.pais = pais;
